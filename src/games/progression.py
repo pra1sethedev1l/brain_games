@@ -3,10 +3,10 @@ from src.engine import run_game
 
 
 def generate_progression():
-    start = random.randint(1, 50)
-    step = random.randint(2, 10)
-    length = random.randint(5, 10)
-    return [start + i * step for i in range(length)]
+    start = random.randint(1, 15)
+    ratio = random.randint(2, 15)
+    length = random.randint(5, 13)
+    return [start * (ratio ** i) for i in range(length)]
 
 
 def game_logic():
